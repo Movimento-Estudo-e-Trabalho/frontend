@@ -13,6 +13,7 @@ const Header = () => {
     { name: "Denuncie", href: "/denuncia" },
     { name: "Sobre o Projeto", href: "/sobre" },
     { name: "Contato", href: "/contato" },
+    { name: "Preciso de Ajuda", href: "/preciso-de-ajuda", highlight: true },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -34,11 +35,12 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href)
-                    ? "text-primary border-b-2 border-primary"
+                className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href)
+                  ? "text-primary border-b-2 border-primary"
+                  : item.highlight
+                    ? "text-red-600 font-semibold"
                     : "text-muted-foreground"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -71,9 +73,12 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
-                    isActive(item.href) ? "text-primary bg-muted" : "text-muted-foreground"
-                  }`}
+                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${isActive(item.href)
+                    ? "text-primary bg-muted"
+                    : item.highlight
+                      ? "text-red-600 font-semibold"
+                      : "text-muted-foreground"
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

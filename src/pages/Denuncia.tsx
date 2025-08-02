@@ -37,7 +37,7 @@ const Denuncia = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main className="pt-16">
         {/* Page Header */}
         <section className="bg-gradient-hero text-white py-16">
@@ -57,7 +57,7 @@ const Denuncia = () => {
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              
+
               {/* Security Notice */}
               <Card className="mb-8 border-primary/20 bg-primary/5">
                 <CardContent className="p-6">
@@ -77,7 +77,7 @@ const Denuncia = () => {
               </Card>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                
+
                 {/* Main Form */}
                 <div className="lg:col-span-2">
                   <Card>
@@ -89,7 +89,7 @@ const Denuncia = () => {
                     </CardHeader>
                     <CardContent>
                       <form onSubmit={handleSubmit} className="space-y-6">
-                        
+
                         {/* Empresa */}
                         <div>
                           <Label htmlFor="empresa">Nome da Empresa *</Label>
@@ -130,7 +130,7 @@ const Denuncia = () => {
                             id="relato"
                             value={formData.relato}
                             onChange={(e) => setFormData({ ...formData, relato: e.target.value })}
-                            placeholder="Descreva em detalhes o que aconteceu. Inclua datas, pessoas envolvidas e qualquer informação relevante."
+                            placeholder="Descreva em detalhes o que aconteceu. Sinta-se livre para incluir ou omitir datas; evite mencionar ou nomear pessoas diretamente envolvidas."
                             className="min-h-[150px]"
                             required
                           />
@@ -156,9 +156,9 @@ const Denuncia = () => {
                                 onChange={handleFileUpload}
                                 className="hidden"
                               />
-                              <Button 
-                                type="button" 
-                                variant="outline" 
+                              <Button
+                                type="button"
+                                variant="outline"
                                 size="sm"
                                 onClick={() => document.getElementById('anexos')?.click()}
                               >
@@ -187,7 +187,7 @@ const Denuncia = () => {
                             <Checkbox
                               id="contato"
                               checked={formData.contatoPosterior}
-                              onCheckedChange={(checked) => 
+                              onCheckedChange={(checked) =>
                                 setFormData({ ...formData, contatoPosterior: checked as boolean })
                               }
                             />
@@ -195,7 +195,7 @@ const Denuncia = () => {
                               Aceito ser contactado posteriormente (opcional e seguro)
                             </Label>
                           </div>
-                          
+
                           {formData.contatoPosterior && (
                             <div>
                               <Label htmlFor="email">Email de Contato</Label>
@@ -223,7 +223,7 @@ const Denuncia = () => {
 
                 {/* Sidebar */}
                 <div className="space-y-6">
-                  
+
                   {/* Help Card */}
                   <Card>
                     <CardHeader>
@@ -237,7 +237,7 @@ const Denuncia = () => {
                         </p>
                         <p className="font-medium">188 (24h)</p>
                       </div>
-                      
+
                       <div>
                         <h4 className="font-medium mb-2">Disque 100</h4>
                         <p className="text-sm text-muted-foreground">
@@ -251,7 +251,12 @@ const Denuncia = () => {
                         <p className="text-sm text-muted-foreground">
                           Denúncias trabalhistas
                         </p>
-                        <Button variant="outline" size="sm" className="w-full mt-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full mt-2"
+                          onClick={() => window.open('https://denuncia.sit.trabalho.gov.br/home', '_blank')}
+                        >
                           Acessar Site
                         </Button>
                       </div>
