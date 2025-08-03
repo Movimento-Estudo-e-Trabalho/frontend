@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Shield, AlertTriangle, Lock, FileText, Upload } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { denunciaStats } from "@/data/websiteStats";
 
 const Denuncia = () => {
   const [formData, setFormData] = useState({
@@ -272,15 +273,15 @@ const Denuncia = () => {
                       <div className="space-y-3">
                         <div className="flex justify-between">
                           <span className="text-sm">Denúncias recebidas</span>
-                          <span className="font-semibold">247</span>
+                          <span className="font-semibold">{denunciaStats.denunciasRecebidas}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-sm">Empresas alertadas</span>
-                          <span className="font-semibold">89</span>
+                          <span className="font-semibold">{denunciaStats.empresasAlertadas}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-sm">Estudantes protegidos</span>
-                          <span className="font-semibold">1.2k+</span>
+                          <span className="font-semibold">{denunciaStats.estudantesProtegidos}</span>
                         </div>
                       </div>
                     </CardContent>

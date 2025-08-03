@@ -7,78 +7,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Star, Search, Filter, MapPin, Briefcase, DollarSign, TrendingUp, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { companies } from "@/data/companies";
 
 const Empresas = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("rating");
 
-  const companies = [
-    {
-      id: 1,
-      name: "TechCorp Solutions",
-      area: "Tecnologia",
-      city: "São Paulo",
-      rating: 4.2,
-      reviewCount: 47,
-      avgSalary: "R$ 1.200",
-      lastUpdate: "2 dias atrás",
-      trend: "up",
-      tags: ["Ambiente colaborativo", "Mentoria"],
-      warnings: 0
-    },
-    {
-      id: 2,
-      name: "Marketing Plus",
-      area: "Marketing",
-      city: "Rio de Janeiro",
-      rating: 2.1,
-      reviewCount: 23,
-      avgSalary: "R$ 400",
-      lastUpdate: "1 semana atrás",
-      trend: "down",
-      tags: ["Carga excessiva"],
-      warnings: 3
-    },
-    {
-      id: 3,
-      name: "Design Studio Pro",
-      area: "Design",
-      city: "Belo Horizonte",
-      rating: 4.8,
-      reviewCount: 31,
-      avgSalary: "R$ 1.500",
-      lastUpdate: "3 dias atrás",
-      trend: "up",
-      tags: ["Excelente mentoria", "Projetos reais"],
-      warnings: 0
-    },
-    {
-      id: 4,
-      name: "Legal Advisors",
-      area: "Direito",
-      city: "Brasília",
-      rating: 3.5,
-      reviewCount: 18,
-      avgSalary: "R$ 800",
-      lastUpdate: "5 dias atrás",
-      trend: "stable",
-      tags: ["Aprendizado"],
-      warnings: 1
-    },
-    {
-      id: 5,
-      name: "FastFood Chain",
-      area: "Varejo",
-      city: "São Paulo",
-      rating: 1.8,
-      reviewCount: 67,
-      avgSalary: "R$ 300",
-      lastUpdate: "1 dia atrás",
-      trend: "down",
-      tags: ["Exploração"],
-      warnings: 8
-    }
-  ];
+
 
   const getRatingColor = (rating: number) => {
     if (rating >= 4) return "text-secondary";
@@ -97,7 +32,7 @@ const Empresas = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main className="pt-16">
         {/* Page Header */}
         <section className="bg-gradient-hero text-white py-16">
@@ -126,7 +61,7 @@ const Empresas = () => {
                       className="pl-10"
                     />
                   </div>
-                  
+
                   <Select value={sortBy} onValueChange={setSortBy}>
                     <SelectTrigger>
                       <SelectValue placeholder="Ordenar por" />
@@ -176,7 +111,7 @@ const Empresas = () => {
                             </Badge>
                           )}
                         </div>
-                        
+
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                           <div className="flex items-center">
                             <Briefcase className="h-4 w-4 mr-1" />
