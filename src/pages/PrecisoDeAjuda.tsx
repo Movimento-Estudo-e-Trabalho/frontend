@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, Shield, Users, BookOpen, MessageCircle, AlertTriangle } from "lucide-react";
+import { emergencyContacts, supportResources } from "@/data/emergencyContacts";
 
 const PrecisoDeAjuda = () => {
     return (
@@ -65,69 +66,23 @@ const PrecisoDeAjuda = () => {
                                         </CardHeader>
                                         <CardContent className="space-y-4">
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">CVV - Centro de Valorização da Vida</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Apoio emocional e prevenção do suicídio
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('tel:188')}
-                                                    >
-                                                        <Phone className="mr-2 h-4 w-4" />
-                                                        188 (24h)
-                                                    </Button>
-                                                </div>
-
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">Disque 100</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Denúncias de violações de direitos humanos
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('tel:100')}
-                                                    >
-                                                        <Phone className="mr-2 h-4 w-4" />
-                                                        100 (24h)
-                                                    </Button>
-                                                </div>
-
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">Polícia Militar</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Emergências e situações de perigo
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('tel:190')}
-                                                    >
-                                                        <Phone className="mr-2 h-4 w-4" />
-                                                        190
-                                                    </Button>
-                                                </div>
-
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">SAMU</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Emergências médicas
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('tel:192')}
-                                                    >
-                                                        <Phone className="mr-2 h-4 w-4" />
-                                                        192
-                                                    </Button>
-                                                </div>
+                                                {emergencyContacts.map((contact) => (
+                                                    <div key={contact.phone} className="p-4 border rounded-lg">
+                                                        <h4 className="font-semibold mb-2">{contact.name}</h4>
+                                                        <p className="text-sm text-muted-foreground mb-2">
+                                                            {contact.description}
+                                                        </p>
+                                                        <Button
+                                                            variant="outline"
+                                                            size="sm"
+                                                            className="w-full"
+                                                            onClick={() => window.open(`tel:${contact.phone}`)}
+                                                        >
+                                                            <Phone className="mr-2 h-4 w-4" />
+                                                            {contact.phone}{contact.phone === "188" || contact.phone === "100" ? " (24h)" : ""}
+                                                        </Button>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </CardContent>
                                     </Card>
@@ -142,65 +97,22 @@ const PrecisoDeAjuda = () => {
                                         </CardHeader>
                                         <CardContent className="space-y-4">
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">Ministério Público do Trabalho</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Denúncias trabalhistas e orientação jurídica
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('https://denuncia.sit.trabalho.gov.br/home', '_blank')}
-                                                    >
-                                                        Acessar Site
-                                                    </Button>
-                                                </div>
-
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">Superintendência Regional do Trabalho</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Fiscalização e denúncias trabalhistas
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('https://www.gov.br/trabalho-e-previdencia/pt-br', '_blank')}
-                                                    >
-                                                        Acessar Site
-                                                    </Button>
-                                                </div>
-
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">Defensoria Pública</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Assistência jurídica gratuita
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('https://www.defensoria.sp.def.br/', '_blank')}
-                                                    >
-                                                        Acessar Site
-                                                    </Button>
-                                                </div>
-
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">OAB - Ordem dos Advogados</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Orientação jurídica e encaminhamentos
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('https://www.oab.org.br/', '_blank')}
-                                                    >
-                                                        Acessar Site
-                                                    </Button>
-                                                </div>
+                                                {supportResources.filter(resource => resource.type === "legal" || resource.type === "government").map((resource) => (
+                                                    <div key={resource.name} className="p-4 border rounded-lg">
+                                                        <h4 className="font-semibold mb-2">{resource.name}</h4>
+                                                        <p className="text-sm text-muted-foreground mb-2">
+                                                            {resource.description}
+                                                        </p>
+                                                        <Button
+                                                            variant="outline"
+                                                            size="sm"
+                                                            className="w-full"
+                                                            onClick={() => window.open(resource.url, '_blank')}
+                                                        >
+                                                            Acessar Site
+                                                        </Button>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </CardContent>
                                     </Card>
@@ -215,35 +127,22 @@ const PrecisoDeAjuda = () => {
                                         </CardHeader>
                                         <CardContent className="space-y-4">
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">CAPS - Centro de Atenção Psicossocial</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Atendimento psicológico gratuito
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/caps', '_blank')}
-                                                    >
-                                                        Encontrar CAPS
-                                                    </Button>
-                                                </div>
-
-                                                <div className="p-4 border rounded-lg">
-                                                    <h4 className="font-semibold mb-2">Centros de Saúde Mental</h4>
-                                                    <p className="text-sm text-muted-foreground mb-2">
-                                                        Atendimento psicológico e psiquiátrico
-                                                    </p>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="w-full"
-                                                        onClick={() => window.open('https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-mental', '_blank')}
-                                                    >
-                                                        Mais Informações
-                                                    </Button>
-                                                </div>
+                                                {supportResources.filter(resource => resource.type === "health").map((resource) => (
+                                                    <div key={resource.name} className="p-4 border rounded-lg">
+                                                        <h4 className="font-semibold mb-2">{resource.name}</h4>
+                                                        <p className="text-sm text-muted-foreground mb-2">
+                                                            {resource.description}
+                                                        </p>
+                                                        <Button
+                                                            variant="outline"
+                                                            size="sm"
+                                                            className="w-full"
+                                                            onClick={() => window.open(resource.url, '_blank')}
+                                                        >
+                                                            {resource.name.includes("CAPS") ? "Encontrar CAPS" : "Mais Informações"}
+                                                        </Button>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </CardContent>
                                     </Card>

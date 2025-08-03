@@ -3,12 +3,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Users, Target, Heart, TrendingUp, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { websiteStats } from "@/data/websiteStats";
 
 const Sobre = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-gradient-hero text-white py-20">
@@ -16,7 +17,7 @@ const Sobre = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl font-bold mb-6">Sobre o EstágioJusto</h1>
               <p className="text-xl text-white/90 leading-relaxed">
-                Uma plataforma criada por estudantes, para estudantes, com o objetivo de 
+                Uma plataforma criada por estudantes, para estudantes, com o objetivo de
                 acabar com a romantização e exploração dos estágios no Brasil.
               </p>
             </div>
@@ -30,7 +31,7 @@ const Sobre = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold mb-6">Nossa Missão</h2>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Chega de aceitar o inaceitável. Chega de romantizar exploração. 
+                  Chega de aceitar o inaceitável. Chega de romantizar exploração.
                   É hora de dar transparência real às práticas de estágio no Brasil.
                 </p>
               </div>
@@ -82,8 +83,8 @@ const Sobre = () => {
               <div className="prose prose-lg max-w-none">
                 <div className="bg-card p-8 rounded-lg shadow-card">
                   <p className="text-lg leading-relaxed mb-6">
-                    No Brasil, a cultura do estágio se tornou sinônimo de exploração disfarçada de "oportunidade". 
-                    Empresas aproveitam-se da vulnerabilidade dos estudantes para obter mão de obra barata, 
+                    No Brasil, a cultura do estágio se tornou sinônimo de exploração disfarçada de "oportunidade".
+                    Empresas aproveitam-se da vulnerabilidade dos estudantes para obter mão de obra barata,
                     muitas vezes sem oferecer aprendizado real ou condições dignas de trabalho.
                   </p>
 
@@ -114,8 +115,8 @@ const Sobre = () => {
                   </div>
 
                   <p className="text-lg leading-relaxed">
-                    <strong>Não somos contra os estágios.</strong> Somos contra a exploração. 
-                    Acreditamos que estágios podem e devem ser experiências transformadoras, 
+                    <strong>Não somos contra os estágios.</strong> Somos contra a exploração.
+                    Acreditamos que estágios podem e devem ser experiências transformadoras,
                     mas isso só acontece quando há transparência, respeito e condições dignas.
                   </p>
                 </div>
@@ -143,7 +144,7 @@ const Sobre = () => {
                       <div>
                         <h3 className="text-lg font-semibold mb-2">Avalie sua Experiência</h3>
                         <p className="text-muted-foreground">
-                          Compartilhe sua experiência real de estágio de forma anônima e segura. 
+                          Compartilhe sua experiência real de estágio de forma anônima e segura.
                           Avalie critérios como ambiente, aprendizado, remuneração e exploração.
                         </p>
                       </div>
@@ -158,7 +159,7 @@ const Sobre = () => {
                       <div>
                         <h3 className="text-lg font-semibold mb-2">Pesquise Empresas</h3>
                         <p className="text-muted-foreground">
-                          Consulte avaliações reais antes de aceitar uma oportunidade. 
+                          Consulte avaliações reais antes de aceitar uma oportunidade.
                           Veja médias salariais, ambiente de trabalho e alertas da comunidade.
                         </p>
                       </div>
@@ -173,7 +174,7 @@ const Sobre = () => {
                       <div>
                         <h3 className="text-lg font-semibold mb-2">Denuncie Abusos</h3>
                         <p className="text-muted-foreground">
-                          Caso sofra qualquer tipo de abuso ou exploração, denuncie de forma 
+                          Caso sofra qualquer tipo de abuso ou exploração, denuncie de forma
                           segura e anônima. Sua denúncia pode proteger outros estudantes.
                         </p>
                       </div>
@@ -188,7 +189,7 @@ const Sobre = () => {
                       <div>
                         <h3 className="text-lg font-semibold mb-2">Construa o Futuro</h3>
                         <p className="text-muted-foreground">
-                          Juntos, criamos uma base de dados que pressiona empresas a melhorar 
+                          Juntos, criamos uma base de dados que pressiona empresas a melhorar
                           suas práticas e ajuda estudantes a fazer escolhas informadas.
                         </p>
                       </div>
@@ -205,22 +206,22 @@ const Sobre = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-12">Nosso Impacto</h2>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">500+</div>
+                  <div className="text-4xl font-bold text-accent mb-2">{websiteStats.empresasAvaliadas}</div>
                   <div className="text-white/80">Empresas Avaliadas</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">2.5k+</div>
+                  <div className="text-4xl font-bold text-accent mb-2">{websiteStats.estudantesAtivos}</div>
                   <div className="text-white/80">Estudantes Ativos</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">89</div>
+                  <div className="text-4xl font-bold text-accent mb-2">{websiteStats.denunciasProcessadas}</div>
                   <div className="text-white/80">Denúncias Processadas</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">12</div>
+                  <div className="text-4xl font-bold text-accent mb-2">{websiteStats.empresasMudaram}</div>
                   <div className="text-white/80">Empresas Mudaram</div>
                 </div>
               </div>
@@ -235,10 +236,10 @@ const Sobre = () => {
               <Heart className="h-16 w-16 text-primary mx-auto mb-6" />
               <h2 className="text-3xl font-bold mb-6">Junte-se à Mudança</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Cada avaliação, cada denúncia, cada compartilhamento nos ajuda a construir 
+                Cada avaliação, cada denúncia, cada compartilhamento nos ajuda a construir
                 um futuro onde estágios são oportunidades reais de crescimento, não exploração.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
                   <Link to="/avaliar">Avaliar Empresa</Link>
