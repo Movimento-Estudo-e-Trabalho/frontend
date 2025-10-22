@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero text-white overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 bg-black/20" />
+    <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+      {/* Background image */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <img
+          src="/imgs/estudante.jpg" // substitua pelo caminho da sua imagem
+          alt="Fundo ativista"
+          className="w-full h-full object-cover"
+        />
+        {/* Overlay escuro para contraste do texto */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -19,9 +23,9 @@ const HeroSection = () => {
             <br />
             <span className="text-accent">o estágio precarizado</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-            Transparência nas práticas de estágio. Avalie empresas, denuncie abusos 
+            Avalie empresas, denuncie abusos 
             e ajude outros estudantes a tomar decisões informadas.
           </p>
 
@@ -33,11 +37,14 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            
-            <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-              <Link to="/denuncia">
-                Denunciar Abuso
-              </Link>
+
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+            >
+              <Link to="/denuncia">Denunciar Abuso</Link>
             </Button>
           </div>
 
@@ -51,7 +58,7 @@ const HeroSection = () => {
               <div className="text-white/80">Avaliações Reais</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-accent">98%</div>
+              <div className="text-3xl font-bold text-accent">100%</div>
               <div className="text-white/80">Anonimato Garantido</div>
             </div>
           </div>
