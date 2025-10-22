@@ -31,11 +31,11 @@ const Contato = () => {
       
       <main className="pt-16">
         {/* Page Header */}
-        <section className="bg-gradient-hero text-white py-16">
+        <section className="text-4xl font-bold mb-4 text-primary">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-4">Entre em Contato</h1>
-              <p className="text-xl text-white/90">
+              <p className="text-xl text-black/90">
                 Estamos aqui para ouvir suas sugestões, dúvidas e feedbacks
               </p>
             </div>

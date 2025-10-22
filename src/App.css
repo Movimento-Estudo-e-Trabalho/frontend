@@ -1,21 +1,34 @@
+:root {
+  --color-primary: #0988a6;   /* azul petróleo */
+  --color-accent: #f6511d;    /* laranja avermelhado */
+  --color-highlight: #ffb400; /* amarelo vibrante */
+  --color-text: #222;
+  --color-muted: #777;
+  --color-bg: #f9f9f9;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
 }
 
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms, transform 200ms ease;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 1.8em var(--color-highlight));
+  transform: scale(1.05);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--color-accent));
 }
 
 @keyframes logo-spin {
@@ -35,8 +48,28 @@
 
 .card {
   padding: 2em;
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(9, 136, 166, 0.15);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(9, 136, 166, 0.25);
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--color-muted);
+  margin-top: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 200ms ease;
+}
+a:hover {
+  color: var(--color-accent);
 }

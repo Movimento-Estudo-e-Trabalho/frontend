@@ -2,119 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
-    /* Fundos */
-    --background: 0 0% 99%;
-    --foreground: 0 0% 10%;
+    /* Fundos neutros */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 15%;
 
-    /* Cores principais - vermelho revolucionário */
-    --primary: 0 75% 45%;
+    /* Primária - Laranja avermelhado (#f6511d) */
+    --primary: 15 80% 50%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 0 75% 38%;
+    --primary-hover: 15 80% 43%;
 
-    /* Secundárias - esperança e solidariedade */
-    --secondary: 120 60% 35%;
+    /* Secundária - Azul petróleo (#0988a6) */
+    --secondary: 193 60% 36%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 120 60% 28%;
+    --secondary-hover: 193 60% 30%;
 
-    /* Neutras - preto & cinza industrial */
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 35%;
+    /* Acento - Amarelo (#ffb400), uso pontual */
+    --accent: 45 100% 55%;
+    --accent-foreground: 0 0% 15%;
+    --accent-hover: 45 100% 47%;
 
-    /* Acentos - amarelo de cartaz */
-    --accent: 45 100% 50%;
-    --accent-foreground: 0 0% 10%;
+    /* Neutros */
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Cores de alerta - denúncia e conflito */
-    --warning: 25 95% 50%;
-    --warning-foreground: 0 0% 98%;
-
-    --destructive: 0 85% 40%; 
+    /* Estados */
+    --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 98%;
+    --warning: 35 95% 55%;
+    --warning-foreground: 0 0% 10%;
 
     /* Bordas e inputs */
     --border: 0 0% 85%;
     --input: 0 0% 85%;
-    --ring: 0 75% 45%;
+    --ring: 15 80% 50%;
 
-    /* Gradientes (apenas as cores) */
-    --gradient-hero-start: 0 75% 45%;
-    --gradient-hero-end: 45 100% 50%;
+    /* Gradientes suaves */
+    --gradient-hero-start: 15 80% 50%;
+    --gradient-hero-end: 193 60% 36%;
     --gradient-card-start: 0 0% 100%;
-    --gradient-card-end: 0 0% 95%;
+    --gradient-card-end: 0 0% 96%;
 
-    /* Sombras */
-    --shadow-card: 0 4px 6px -1px hsl(0 0% 20% / 0.2), 0 2px 4px -1px hsl(0 0% 20% / 0.1);
-    --shadow-elevated: 0 10px 15px -3px hsl(0 0% 20% / 0.25), 0 4px 6px -2px hsl(0 0% 20% / 0.15);
+    /* Sombras suaves */
+    --shadow-card: 0 2px 4px hsl(0 0% 0% / 0.05);
+    --shadow-elevated: 0 4px 10px hsl(0 0% 0% / 0.1);
 
-    --radius: 0.25rem; /* firme, estilo cartaz */
+    --radius: 0.6rem;
 
     /* Sidebar */
     --sidebar-background: 0 0% 97%;
-    --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 0 75% 45%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 15 80% 50%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 45 100% 50%;
-    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-accent: 193 60% 36%;
+    --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 0 0% 85%;
-    --sidebar-ring: 0 75% 45%;
+    --sidebar-ring: 15 80% 50%;
   }
 
   .dark {
-    --background: 0 0% 8%;
+    --background: 0 0% 10%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 10%;
+    --card: 0 0% 14%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 10%;
+    --popover: 0 0% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 0 75% 55%;
+    --primary: 15 85% 55%;
     --primary-foreground: 0 0% 98%;
-
-    --secondary: 120 55% 35%;
+    --secondary: 193 65% 45%;
     --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
-
-    --accent: 45 100% 55%;
+    --accent: 45 100% 60%;
     --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 80% 45%;
-    --destructive-foreground: 0 0% 98%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 70%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 75% 55%;
-
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 75% 55%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 45 100% 55%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 0 75% 55%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 15 85% 55%;
   }
 }
 
-/* Utilitários para gradientes */
+/* Gradientes suaves e elegantes */
 @layer utilities {
   .bg-hero {
     background: linear-gradient(
       135deg,
-      hsl(var(--gradient-hero-start)) 0%,
-      hsl(var(--gradient-hero-end)) 100%
+      hsl(var(--gradient-hero-start) / 0.9) 0%,
+      hsl(var(--gradient-hero-end) / 0.9) 100%
     );
   }
 
@@ -130,10 +115,20 @@
 @layer base {
   body {
     @apply text-foreground;
-    background-color: hsl(90, 4%, 86%); /* equivalente a #ddded6 */
+    background-color: hsl(var(--background));
   }
 }
 
+@layer utilities {
+  .text-muted {
+    color: hsl(var(--muted-foreground));
+  }
 
+  .text-primary {
+    color: hsl(var(--primary));
+  }
 
-
+  .text-secondary {
+    color: hsl(var(--secondary));
+  }
+}

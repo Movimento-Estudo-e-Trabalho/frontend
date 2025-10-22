@@ -11,14 +11,14 @@ const PrecisoDeAjuda = () => {
 
             <main className="pt-16">
                 {/* Page Header */}
-                <section className="bg-gradient-hero text-white py-16">
+                <section className="bg-gradient-hero text-black py-16">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto text-center">
                             <div className="flex justify-center mb-4">
                                 <Heart className="h-16 w-16 text-accent" />
                             </div>
                             <h1 className="text-4xl font-bold mb-4">Preciso de Ajuda</h1>
-                            <p className="text-xl text-white/90">
+                            <p className="text-xl text-black/90">
                                 Você não está sozinho. Aqui você encontra apoio e recursos para sua situação
                             </p>
                         </div>
