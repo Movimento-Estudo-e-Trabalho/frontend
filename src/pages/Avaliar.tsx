@@ -270,7 +270,7 @@ const Avaliar = () => {
                 onChange={(value) =>
                   setFormData({ ...formData, cargaTrabalho: value })
                 }
-                label="Carga de Trabalho vs Bolsa"
+                label="Remuneração Justa"
               />
             </div>
 
@@ -280,7 +280,7 @@ const Avaliar = () => {
                 onChange={(value) =>
                   setFormData({ ...formData, exploracao: value })
                 }
-                label="Nível de Exploração (1 = muito explorado, 5 = nada explorado)"
+                label="Recomendaria a vaga?"
               />
             </div>
           </div>
