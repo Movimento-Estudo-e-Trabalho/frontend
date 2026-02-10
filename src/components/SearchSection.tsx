@@ -18,19 +18,22 @@ const SearchSection = () => {
   return (
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Busque empresas por área, cidade ou remuneração</h2>
-            <p className="text-muted-foreground text-lg">
-              Encontre informações reais sobre estágios e faça escolhas conscientes
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary">
+              Acesso rápido a informação real
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3">Busque empresas por área, cidade ou remuneração</h2>
+            <p className="text-muted-foreground text-lg mt-3">
+              Encontre informações diretas de quem viveu o estágio.
             </p>
           </div>
 
-          <div className="bg-card rounded-lg shadow-card p-6">
+          {/* Search panel with activist framing */}
+          <div className="bg-card rounded-2xl shadow-card p-6 md:p-8 border-activist">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-              {/* Campo principal de busca */}
               <div className="lg:col-span-2 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
                   placeholder="Nome da empresa..."
                   value={searchTerm}
@@ -39,7 +42,6 @@ const SearchSection = () => {
                 />
               </div>
 
-              {/* Filtro por área */}
               <Select value={area} onValueChange={setArea}>
                 <SelectTrigger>
                   <div className="flex items-center">
@@ -59,7 +61,6 @@ const SearchSection = () => {
                 </SelectContent>
               </Select>
 
-              {/* Filtro por cidade */}
               <Select value={city} onValueChange={setCity}>
                 <SelectTrigger>
                   <div className="flex items-center">
@@ -79,7 +80,6 @@ const SearchSection = () => {
                 </SelectContent>
               </Select>
 
-              {/* Filtro por remuneração */}
               <Select value={salary} onValueChange={setSalary}>
                 <SelectTrigger>
                   <div className="flex items-center">
@@ -99,11 +99,11 @@ const SearchSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-6">
-              <Button onClick={handleSearch} className="flex-1">
+              <Button onClick={handleSearch} className="flex-1 bg-primary text-primary-foreground">
                 <Search className="mr-2 h-4 w-4" />
                 Buscar Empresas
               </Button>
-              <Button variant="outline" className="sm:w-auto">
+              <Button variant="outline" className="sm:w-auto border-ink text-ink hover:bg-ink/5">
                 <Filter className="mr-2 h-4 w-4" />
                 Filtros Avançados
               </Button>

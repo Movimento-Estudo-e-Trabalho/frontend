@@ -58,23 +58,24 @@ const RecentHighlights = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Destaques Recentes</h2>
-            <p className="text-muted-foreground text-lg">
-              Últimas avaliações e alertas da comunidade
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">Radar da comunidade</p>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3">Destaques recentes</h2>
+            <p className="text-muted-foreground text-lg mt-3">
+              Avaliações e alertas que acendem o debate.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Últimas Avaliações */}
+            {/* Latest reviews */}
             <div className="lg:col-span-2">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <TrendingUp className="mr-2 h-5 w-5 text-primary" />
-                Últimas Avaliações
+                Últimas avaliações
               </h3>
-              
+
               <div className="space-y-4">
                 {recentReviews.map((review) => (
-                  <Card key={review.id} className="hover:shadow-elevated transition-shadow">
+                  <Card key={review.id} className="border-activist hover:shadow-elevated transition-shadow">
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-3">
                         <div>
@@ -93,9 +94,9 @@ const RecentHighlights = () => {
                           )}
                         </div>
                       </div>
-                      
+
                       <p className="text-foreground mb-3">{review.summary}</p>
-                      
+
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
                           <Badge variant="outline">{review.salary}</Badge>
@@ -105,7 +106,7 @@ const RecentHighlights = () => {
                           </div>
                         </div>
                         <Button variant="outline" size="sm" asChild>
-                          <Link to={`/empresas/${review.id}`}>Ver Detalhes</Link>
+                          <Link to={`/empresas/${review.id}`}>Ver detalhes</Link>
                         </Button>
                       </div>
                     </CardContent>
@@ -114,22 +115,22 @@ const RecentHighlights = () => {
               </div>
 
               <div className="text-center mt-6">
-                <Button variant="outline" asChild>
-                  <Link to="/empresas">Ver Todas as Avaliações</Link>
+                <Button variant="outline" asChild className="border-ink text-ink hover:bg-ink/5">
+                  <Link to="/empresas">Ver todas as avaliações</Link>
                 </Button>
               </div>
             </div>
 
-            {/* Alertas e Denúncias */}
+            {/* Alerts and reports */}
             <div>
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <AlertTriangle className="mr-2 h-5 w-5 text-warning" />
-                Alertas Recentes
+                Alertas recentes
               </h3>
-              
+
               <div className="space-y-4">
                 {alerts.map((alert) => (
-                  <Card key={alert.id} className="border-warning/20">
+                  <Card key={alert.id} className="border-warning/40">
                     <CardContent className="p-4">
                       <h4 className="font-medium mb-2">{alert.company}</h4>
                       <div className="flex items-center justify-between">
@@ -143,13 +144,13 @@ const RecentHighlights = () => {
                 ))}
               </div>
 
-              <div className="mt-6 p-6 bg-gradient-card rounded-lg border">
+              <div className="mt-6 p-6 bg-card rounded-2xl border-activist">
                 <h4 className="font-semibold mb-3">Sofreu abuso ou humilhação?</h4>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Denuncie de forma segura e anônima. Sua experiência pode ajudar outros estudantes.
+                  Denuncie de forma segura e anônima. Sua experiência pode proteger outros estudantes.
                 </p>
-                <Button variant="default" size="sm" className="w-full" asChild>
-                  <Link to="/denuncia">Denunciar Agora</Link>
+                <Button variant="default" size="sm" className="w-full bg-primary text-primary-foreground" asChild>
+                  <Link to="/denuncia">Denunciar agora</Link>
                 </Button>
               </div>
             </div>

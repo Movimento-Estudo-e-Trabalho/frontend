@@ -29,7 +29,7 @@ const Contato = () => {
     <div className="min-h-screen">
       <Header />
       
-      <main className="pt-16">
+      <main className="pt-24">
         {/* Page Header */}
         <section className="text-4xl font-bold mb-4 text-primary">
           <div className="container mx-auto px-4">

@@ -39,9 +39,9 @@ const Denuncia = () => {
     <div className="min-h-screen">
       <Header />
 
-      <main className="pt-16">
+      <main className="pt-24">
         {/* Page Header */}
-        <section className="bg-gradient-hero text-foreground py-16">
+        <section className="bg-gradient-hero text-white py-16">
 
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -49,7 +49,7 @@ const Denuncia = () => {
                 <Shield className="h-16 w-16 text-accent" />
               </div>
               <h1 className="text-4xl font-bold mb-4">Denuncie Práticas Abusivas</h1>
-              <p className="text-xl text-black/90">
+              <p className="text-xl text-white/90">
                 Seu relato é seguro, anônimo e pode proteger outros estudantes
               </p>
             </div>

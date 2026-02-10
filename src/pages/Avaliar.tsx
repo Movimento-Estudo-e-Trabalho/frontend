@@ -398,7 +398,7 @@ const Avaliar = () => {
     <div className="min-h-screen">
       <Header />
 
-      <main className="pt-16">
+      <main className="pt-24">
         {/* Page Header */}
           <section className="bg-gradient-hero text-foreground py-16">
           <div className="container mx-auto px-4">

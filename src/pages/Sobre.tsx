@@ -10,13 +10,13 @@ const Sobre = () => {
     <div className="min-h-screen">
       <Header />
 
-      <main className="pt-16">
+      <main className="pt-24">
         {/* Hero Section */}
-        <section className="bg-gradient-hero text-foreground py-16">
+        <section className="bg-gradient-hero text-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl font-bold mb-6">Sobre o EstágioJusto</h1>
-              <p className="text-xl text-foreground/80">
+              <p className="text-xl text-white/80">
                 Uma plataforma criada por estudantes, para estudantes, com o objetivo de
                 acabar com a romantização e exploração dos estágios no Brasil.
               </p>
@@ -205,24 +205,24 @@ const Sobre = () => {
         <section className="py-16 bg-gradient-hero text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl text-foreground mb-12">Nosso Impacto</h2>
+              <h2 className="text-3xl text-white mb-12">Nosso Impacto</h2>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                   <div className="text-4xl font-bold text-accent mb-2">{websiteStats.empresasAvaliadas}</div>
-                  <div className="text-black/80">Empresas Avaliadas</div>
+                  <div className="text-white/80">Empresas Avaliadas</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-accent mb-2">{websiteStats.estudantesAtivos}</div>
-                  <div className="text-black/80">Estudantes Ativos</div>
+                  <div className="text-white/80">Estudantes Ativos</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-accent mb-2">{websiteStats.denunciasProcessadas}</div>
-                  <div className="text-black/80">Denúncias Processadas</div>
+                  <div className="text-white/80">Denúncias Processadas</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-accent mb-2">{websiteStats.empresasMudaram}</div>
-                  <div className="text-black/80">Empresas Mudaram</div>
+                  <div className="text-white/80">Empresas Mudaram</div>
                 </div>
               </div>
             </div>
