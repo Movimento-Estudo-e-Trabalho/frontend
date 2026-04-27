@@ -8,6 +8,12 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ["estagiojusto.com.br", "www.estagiojusto.com.br"],
+  },
+  preview: {
+    host: "::",
+    port: 8080,
+    allowedHosts: ["estagiojusto.com.br", "www.estagiojusto.com.br"],
   },
   plugins: [
     react(),
