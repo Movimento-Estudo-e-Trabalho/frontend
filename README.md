@@ -60,6 +60,10 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Frontend documentation
+
+See the formal frontend documentation in [docs/FRONTEND.md](docs/FRONTEND.md).
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/b3f491dd-92a1-4f43-bdde-120d1f9e7869) and click on Share -> Publish.

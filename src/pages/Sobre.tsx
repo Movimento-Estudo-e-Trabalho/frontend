@@ -10,13 +10,13 @@ const Sobre = () => {
     <div className="min-h-screen">
       <Header />
 
-      <main className="pt-16">
+      <main className="pt-24">
         {/* Hero Section */}
-        <section className="bg-gradient-hero text-white py-20">
+        <section className="bg-gradient-hero text-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl font-bold mb-6">Sobre o EstágioJusto</h1>
-              <p className="text-xl text-white/90 leading-relaxed">
+              <p className="text-xl text-white/80">
                 Uma plataforma criada por estudantes, para estudantes, com o objetivo de
                 acabar com a romantização e exploração dos estágios no Brasil.
               </p>
@@ -205,7 +205,7 @@ const Sobre = () => {
         <section className="py-16 bg-gradient-hero text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-12">Nosso Impacto</h2>
+              <h2 className="text-3xl text-white mb-12">Nosso Impacto</h2>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
